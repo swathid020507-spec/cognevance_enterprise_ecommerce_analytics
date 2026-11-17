@@ -17,6 +17,22 @@ The **Enterprise E-Commerce & Analytics Platform** delivers end-to-end e-commerc
 
 ---
 
+## 🌐 Live Deployment
+
+The application is deployed and publicly accessible at the following verified endpoints:
+
+- **Frontend Website:** [https://cognevance-ecommerce-frontend.onrender.com](https://cognevance-ecommerce-frontend.onrender.com)
+- **Backend API:** [https://cognevance-ecommerce-backend.onrender.com](https://cognevance-ecommerce-backend.onrender.com)
+- **Backend Health Check:** [https://cognevance-ecommerce-backend.onrender.com/api/health](https://cognevance-ecommerce-backend.onrender.com/api/health)
+
+### Deployment Technologies
+
+- **Frontend Hosting:** Render Static Site
+- **Backend Hosting:** Render Web Service
+- **Database:** MongoDB Atlas
+
+---
+
 ## 🛠️ Technology Stack
 
 | Layer | Technology | Details |
