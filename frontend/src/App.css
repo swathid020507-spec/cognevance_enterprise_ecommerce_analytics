@@ -1,0 +1,141 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1rem;
+}
+
+.storefront-section {
+  margin-bottom: 3.5rem;
+}
+
+.section-title-row {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Loading & Empty States */
+.catalog-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.catalog-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+.catalog-empty h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.catalog-empty p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.btn-reset-filters {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.btn-reset-filters:hover {
+  background: var(--primary-hover);
+}
+
+/* Diagnostics & Admin Sections */
+.health-view-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.health-view-intro {
+  margin-bottom: 1.5rem;
+}
+
+.health-view-intro h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.health-view-intro p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.35rem;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

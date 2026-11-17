@@ -1,0 +1,113 @@
+.filter-wrapper {
+  margin-bottom: 2rem;
+}
+
+.filter-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.category-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 0.25rem;
+}
+
+.category-chips::-webkit-scrollbar {
+  height: 4px;
+}
+.category-chips::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.chip-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.chip-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.chip-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.sort-box select {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.sort-box select:focus {
+  border-color: var(--primary);
+}
+
+.active-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-light);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
+  color: #1e3a8a;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+.clear-filters-btn:hover {
+  text-decoration: underline;
+}

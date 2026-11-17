@@ -1,0 +1,43 @@
+.footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.footer-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-right {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.badge-tag {
+  background: #f1f5f9;
+  border: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  color: #475569;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}

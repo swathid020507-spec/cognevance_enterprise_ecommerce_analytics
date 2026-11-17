@@ -1,0 +1,225 @@
+.health-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.health-card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot.online {
+  background-color: var(--success);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.status-dot.offline {
+  background-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.status-dot.loading {
+  background-color: var(--warning);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.9); }
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.card-subtitle {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.endpoint-tag {
+  background: #f1f5f9;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.refresh-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.health-card-body {
+  padding: 1.5rem;
+}
+
+.config-banner {
+  background: #f8fafc;
+  border: 1px dashed var(--border-color);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+}
+
+.config-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.config-value {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.metric-item {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metric-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.metric-value.timestamp {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.metric-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.metric-badge.status-ok {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.metric-badge.status-warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.alert-box {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.alert-error {
+  background: var(--danger-bg);
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.alert-warning {
+  background: var(--warning-bg);
+  border: 1px solid #fef3c7;
+  color: #92400e;
+}
+
+.alert-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.alert-content p {
+  margin-top: 0.25rem;
+  font-size: 0.825rem;
+  opacity: 0.9;
+}
+
+.health-card-footer {
+  background: #f8fafc;
+  border-top: 1px solid var(--border-color);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.785rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
